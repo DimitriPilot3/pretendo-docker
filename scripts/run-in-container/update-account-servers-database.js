@@ -109,6 +109,15 @@ async function runAsync() {
         1,
         "0".repeat(64)
     );
+    await createNexServer(
+        "Zelda TFH",
+        "00176E00",
+        ["0004000000176E00", "0004000000176F00", "0004000000177000", "0004000000182B00"],
+        process.env.SERVER_IP,
+        process.env.TFH_PORT,
+        1,
+        process.env.TFH_AES_KEY
+    );
 }
 
 runAsync().then(() => {
